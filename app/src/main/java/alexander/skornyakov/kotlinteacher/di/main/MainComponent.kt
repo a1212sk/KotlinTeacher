@@ -4,6 +4,7 @@ import alexander.skornyakov.kotlinteacher.ui.main.MainActivity
 import alexander.skornyakov.kotlinteacher.ui.main.first.FirstFragment
 import alexander.skornyakov.kotlinteacher.ui.main.second.SecondFragment
 import dagger.Subcomponent
+import javax.inject.Singleton
 
 @Subcomponent(modules = [MainModule::class])
 interface MainComponent{
