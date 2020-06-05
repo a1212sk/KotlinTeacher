@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "433050412563",
+    "firebase_url": "https://kotlin-teacher.firebaseio.com",
+    "project_id": "kotlin-teacher",
+    "storage_bucket": "kotlin-teacher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433050412563:android:f35e330571ae59951601e6",
+        "android_client_info": {
+          "package_name": "alexander.skornyakov.kotlinteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433050412563-m2537ocajkhbofci2jd7hh8r6p9dmuic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdV2TE6Ov_0uEc0e3Mjd40oTRjNf4M_Bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433050412563-m2537ocajkhbofci2jd7hh8r6p9dmuic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
