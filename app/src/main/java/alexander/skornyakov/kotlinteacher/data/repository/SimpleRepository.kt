@@ -1,8 +1,8 @@
 package alexander.skornyakov.kotlinteacher.data.repository
 
 import alexander.skornyakov.kotlinteacher.R
-import alexander.skornyakov.kotlinteacher.data.model.MainFirstModel
-import alexander.skornyakov.kotlinteacher.data.model.MainSecondModel
+import alexander.skornyakov.kotlinteacher.data.model.SectionModel
+import alexander.skornyakov.kotlinteacher.data.model.StepModel
 import android.content.Context
 import android.graphics.BitmapFactory
 import kotlinx.coroutines.flow.Flow
@@ -11,26 +11,26 @@ import javax.inject.Inject
 
 class SimpleRepository @Inject constructor(val context: Context) : IRepository {
 
-    override fun getAllFirstModels(): Flow<MainFirstModel> {
+    override fun getAllSections(): Flow<SectionModel> {
         return flow {
             repeat (10) {
                 val image =
-                    BitmapFactory.decodeResource(context?.resources, R.drawable.daisies_5091308_640)
+                    BitmapFactory.decodeResource(context?.resources, R.drawable.power)
                 val item =
-                    MainFirstModel("Header $it", image,
+                    SectionModel("Header $it", image,
                         context.resources.getString(R.string.chapter_text))
                 emit(item)
             }
         }
     }
 
-    override fun getAllSecondModels(): Flow<MainSecondModel> {
+    override fun getAllSecondModels(): Flow<StepModel> {
         return flow {
             repeat (10) {
                 val image =
                     BitmapFactory.decodeResource(context?.resources, R.drawable.daisies_5091308_640)
                 val item =
-                    MainSecondModel("Second Header $it", image,
+                    StepModel("Second Header $it", image,
                         context.resources.getString(R.string.text))
                 emit(item)
             }

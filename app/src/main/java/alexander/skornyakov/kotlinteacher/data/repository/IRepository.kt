@@ -1,12 +1,12 @@
 package alexander.skornyakov.kotlinteacher.data.repository
 
-import alexander.skornyakov.kotlinteacher.data.model.MainFirstModel
-import alexander.skornyakov.kotlinteacher.data.model.MainSecondModel
+import alexander.skornyakov.kotlinteacher.data.model.SectionModel
+import alexander.skornyakov.kotlinteacher.data.model.StepModel
 import kotlinx.coroutines.flow.Flow
 
 interface IRepository {
 
-    fun getAllFirstModels() : Flow<MainFirstModel>
-    fun getAllSecondModels() : Flow<MainSecondModel>
+    fun getAllSections() : Flow<SectionModel>
+    fun getAllSecondModels() : Flow<StepModel>
 
 }

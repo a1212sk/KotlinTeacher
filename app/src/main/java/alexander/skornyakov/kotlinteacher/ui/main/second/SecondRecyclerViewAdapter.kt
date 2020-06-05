@@ -1,7 +1,7 @@
 package alexander.skornyakov.kotlinteacher.ui.main.second
 
 import alexander.skornyakov.kotlinteacher.R
-import alexander.skornyakov.kotlinteacher.data.model.MainSecondModel
+import alexander.skornyakov.kotlinteacher.data.model.StepModel
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
 class SecondRecyclerViewAdapter
-    : ListAdapter<MainSecondModel, SecondRecyclerViewAdapter.SecondViewHolder>(ModelDiffCallback()){
+    : ListAdapter<StepModel, SecondRecyclerViewAdapter.SecondViewHolder>(ModelDiffCallback()){
 
     interface OnItemClickListener{
         fun onItemClick(view: View, position: Int)
@@ -60,12 +60,12 @@ class SecondRecyclerViewAdapter
 
 }
 
-class ModelDiffCallback : DiffUtil.ItemCallback<MainSecondModel>() {
-    override fun areItemsTheSame(oldItem: MainSecondModel, newItem: MainSecondModel): Boolean {
+class ModelDiffCallback : DiffUtil.ItemCallback<StepModel>() {
+    override fun areItemsTheSame(oldItem: StepModel, newItem: StepModel): Boolean {
         return oldItem == newItem
     }
 
-    override fun areContentsTheSame(oldItem: MainSecondModel, newItem: MainSecondModel): Boolean {
+    override fun areContentsTheSame(oldItem: StepModel, newItem: StepModel): Boolean {
         return oldItem == newItem
     }
 

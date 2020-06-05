@@ -1,6 +1,6 @@
 package alexander.skornyakov.kotlinteacher.ui.main.second
 
-import alexander.skornyakov.kotlinteacher.data.model.MainSecondModel
+import alexander.skornyakov.kotlinteacher.data.model.StepModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,7 +20,7 @@ class SecondViewModel @Inject constructor() : ViewModel(){
 
     val message = "Second fragment"
 
-    val items = MutableLiveData<MutableList<MainSecondModel>>()
+    val items = MutableLiveData<MutableList<StepModel>>()
 
     init{
         items.value = mutableListOf()

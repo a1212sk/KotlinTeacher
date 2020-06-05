@@ -63,7 +63,7 @@ class FirstFragment : Fragment(){
         val items = binding.vm?.items
         items?.value?.clear()
         loadDataJob = CoroutineScope(Dispatchers.IO + Job()).launch {
-            repository.getAllFirstModels()
+            repository.getAllSections()
                 .flowOn(Dispatchers.IO)
                 .collect {
                     items?.value?.add(it)
