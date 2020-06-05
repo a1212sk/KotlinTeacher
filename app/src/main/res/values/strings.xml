@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kotlin Teacher</string>
+    <string name="ApplicationName">General Application</string>
+    <string name="text">Lorem ipsum dolor sit amet\n
+        \n
+        Consectetur adipiscing elit. \n
+        \n
+        1) Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \n\n
+        2) Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <string name="chapter_text">Some chapter description\nMay be multiline</string>
+</resources>
