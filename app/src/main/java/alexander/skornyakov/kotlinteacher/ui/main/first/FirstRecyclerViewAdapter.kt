@@ -29,8 +29,6 @@ class FirstRecyclerViewAdapter :
         RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
         val header = itemView.findViewById<TextView>(R.id.header)
-        val text = itemView.findViewById<TextView>(R.id.text)
-        val image = itemView.findViewById<ImageView>(R.id.image)
 
         init {
             itemView.findViewById<CardView>(R.id.first_card).setOnClickListener(this)
@@ -55,8 +53,6 @@ class FirstRecyclerViewAdapter :
         val model = getItem(position)
         holder.apply {
             header.text = model.header
-            text.text = model.text
-            image.setImageBitmap(model.image)
         }
     }
 

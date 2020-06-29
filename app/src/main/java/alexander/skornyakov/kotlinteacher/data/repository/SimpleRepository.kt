@@ -15,7 +15,7 @@ class SimpleRepository @Inject constructor(val context: Context) : IRepository {
         return flow {
             repeat (10) {
                 val image =
-                    BitmapFactory.decodeResource(context?.resources, R.drawable.power)
+                    BitmapFactory.decodeResource(context?.resources, R.drawable.types)
                 val item =
                     SectionModel("Header $it", image,
                         context.resources.getString(R.string.chapter_text))
