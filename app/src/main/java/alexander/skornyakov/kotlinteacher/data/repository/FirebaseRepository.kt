@@ -27,7 +27,7 @@ class FirebaseRepository @Inject constructor(val context: Context): IRepository{
 
     override fun getAllSections(): Flow<SectionModel> {
         return callbackFlow {
-                val listener = firestore.collection("sections")
+                val listener = firestore.collection("sections").orderBy("order")
                     .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                         querySnapshot?.documents?.let{ list ->
                             for(doc in list){
@@ -39,12 +39,9 @@ class FirebaseRepository @Inject constructor(val context: Context): IRepository{
                                 }
                             }
                         }
-
                     }
                 awaitClose { listener.remove() }
-
         }
-
     }
 
     override fun getStepModelsBySection(sectionId: String): Flow<StepModel> {
