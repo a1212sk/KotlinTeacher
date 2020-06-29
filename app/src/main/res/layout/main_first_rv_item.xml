@@ -40,7 +40,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text"
-                app:srcCompat="@drawable/power"
+                app:srcCompat="@drawable/types"
+                tools:srcCompat="@drawable/types"
                 tools:visibility="visible" />
 
             <TextView
