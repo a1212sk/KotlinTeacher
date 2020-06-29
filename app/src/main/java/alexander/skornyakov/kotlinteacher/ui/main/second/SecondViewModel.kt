@@ -8,13 +8,12 @@ import javax.inject.Inject
 
 class SecondViewModel @Inject constructor() : ViewModel(){
 
-    private val _chapter = MutableLiveData<Int>()
-    val chapter : LiveData<Int>
-        get() = _chapter
-
-    fun setChapter(num: Int){
-        if(_chapter.value==null){
-            _chapter.value = num
+    private val _chapterId = MutableLiveData<String>()
+    val chapterId : LiveData<String>
+        get() = _chapterId
+    fun setChapterId(id: String){
+        if(_chapterId.value==null){
+            _chapterId.value = id
         }
     }
 

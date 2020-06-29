@@ -59,7 +59,7 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    def dagger2_version = '2.25.2'
+    def dagger2_version = '2.28.1'
     implementation "com.google.dagger:dagger:$dagger2_version"
     kapt "com.google.dagger:dagger-compiler:$dagger2_version"
     implementation "com.google.dagger:dagger-android:$dagger2_version"
@@ -72,4 +72,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx:21.4.3'
 
     implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.firebaseui:firebase-ui-storage:6.2.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+
 }

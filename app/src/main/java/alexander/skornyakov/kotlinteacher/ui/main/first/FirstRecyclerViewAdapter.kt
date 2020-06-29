@@ -16,7 +16,7 @@ class FirstRecyclerViewAdapter :
     ListAdapter<SectionModel, FirstRecyclerViewAdapter.FirstViewHolder>(ModelDiffCallback()) {
 
     interface OnItemClickListener {
-        fun onItemClick(view: View, position: Int)
+        fun onItemClick(view: View, chapterId: String)
     }
 
     private lateinit var listener: OnItemClickListener
@@ -29,6 +29,7 @@ class FirstRecyclerViewAdapter :
         RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
         val header = itemView.findViewById<TextView>(R.id.header)
+        var chapterId: String = ""
 
         init {
             itemView.findViewById<CardView>(R.id.first_card).setOnClickListener(this)
@@ -37,7 +38,7 @@ class FirstRecyclerViewAdapter :
         override fun onClick(view: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-                listener?.onItemClick(view!!, position)
+                listener?.onItemClick(view!!, chapterId)
             }
         }
     }
@@ -53,6 +54,7 @@ class FirstRecyclerViewAdapter :
         val model = getItem(position)
         holder.apply {
             header.text = model.header
+            chapterId = model.id
         }
     }
 

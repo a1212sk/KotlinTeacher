@@ -7,6 +7,6 @@ import kotlinx.coroutines.flow.Flow
 interface IRepository {
 
     fun getAllSections() : Flow<SectionModel>
-    fun getAllStepModels() : Flow<StepModel>
+    fun getStepModelsBySection(sectionId: String) : Flow<StepModel>
 
 }

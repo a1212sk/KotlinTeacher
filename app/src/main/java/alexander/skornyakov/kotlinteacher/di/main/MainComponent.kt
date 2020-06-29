@@ -4,9 +4,9 @@ import alexander.skornyakov.kotlinteacher.ui.main.MainActivity
 import alexander.skornyakov.kotlinteacher.ui.main.first.FirstFragment
 import alexander.skornyakov.kotlinteacher.ui.main.second.SecondFragment
 import dagger.Subcomponent
-import javax.inject.Singleton
 
-@Subcomponent(modules = [MainModule::class])
+
+@Subcomponent(modules = [MainViewModelsModule::class, MainModule::class])
 interface MainComponent{
 
     @Subcomponent.Factory
@@ -17,4 +17,7 @@ interface MainComponent{
     fun inject(activity: MainActivity)
     fun inject(fragment: FirstFragment)
     fun inject(fragment: SecondFragment)
+
 }
+
+

@@ -14,20 +14,22 @@ class SimpleRepository @Inject constructor(val context: Context) : IRepository {
     override fun getAllSections(): Flow<SectionModel> {
         return flow {
             repeat (10) {
-                val item = SectionModel("Header $it")
+                val item = SectionModel("Header $it",it.toString())
                 emit(item)
             }
         }
     }
 
-    override fun getAllStepModels(): Flow<StepModel> {
+    override fun getStepModelsBySection(sectionId: String): Flow<StepModel> {
         return flow {
             repeat (10) {
                 val image =
                     BitmapFactory.decodeResource(context?.resources, R.drawable.daisies_5091308_640)
                 val item =
-                    StepModel("Second Header $it", image,
-                        context.resources.getString(R.string.text))
+                    StepModel("Second Header $it",
+                        image,
+                        context.resources.getString(R.string.text),
+                        it)
                 emit(item)
             }
         }

@@ -83,10 +83,10 @@ class FirstFragment : Fragment(){
             rvAdapter.submitList(it.toMutableList())
         })
         rvAdapter.setOnItemClickListener(object : OnItemClickListener {
-            override fun onItemClick(view: View, position: Int) {
+            override fun onItemClick(view: View, chapterId: String) {
                 loadDataJob.cancel()
                 val action =
-                    FirstFragmentDirections.actionMainFirstFragmentToMainSecondFragment(position)
+                    FirstFragmentDirections.actionMainFirstFragmentToMainSecondFragment(chapterId)
                 findNavController().navigate(action)
 
             }

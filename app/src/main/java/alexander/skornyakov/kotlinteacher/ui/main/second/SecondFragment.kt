@@ -48,11 +48,7 @@ class SecondFragment : Fragment() {
             false
         )
         binding.vm = vm
-        vm.chapter.observe(viewLifecycleOwner, Observer {
-            it?.let {
-                (activity as MainActivity).setTitle(it.toString())
-            }
-        })
+
         initRecyclerView(binding)
         return binding.root
     }
@@ -66,7 +62,7 @@ class SecondFragment : Fragment() {
         val items = binding.vm?.items
         items?.value?.clear()
         loadDataJob = CoroutineScope(Dispatchers.IO + Job()).launch {
-            repository.getAllStepModels()
+            repository.getStepModelsBySection(vm.chapterId.value!!)
                 .flowOn(Dispatchers.IO)
                 .collect {
                     items?.value?.add(it)
@@ -95,7 +91,7 @@ class SecondFragment : Fragment() {
         super.onAttach(context)
         (requireActivity() as MainActivity).mainComponent.inject(this)
         vm = viewModelProviderFactory.create(SecondViewModel::class.java)
-        val chapter = arguments?.get("chapterNumber") as Int
-        vm.setChapter(chapter)
+        val chapterId = arguments?.get("chapterId") as String
+        vm.setChapterId(chapterId)
     }
 }

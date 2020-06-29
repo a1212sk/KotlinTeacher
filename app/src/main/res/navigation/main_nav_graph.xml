@@ -27,8 +27,7 @@
         android:label="SecondFragment"
         tools:layout="@layout/main_second_fragment">
         <argument
-            android:name="chapterNumber"
-            app:argType="integer"
-            android:defaultValue="-1"/>
+            android:name="chapterId"
+            app:argType="string" />
     </fragment>
 </navigation>
