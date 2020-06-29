@@ -66,7 +66,7 @@ class SecondFragment : Fragment() {
         val items = binding.vm?.items
         items?.value?.clear()
         loadDataJob = CoroutineScope(Dispatchers.IO + Job()).launch {
-            repository.getAllSecondModels()
+            repository.getAllStepModels()
                 .flowOn(Dispatchers.IO)
                 .collect {
                     items?.value?.add(it)

@@ -11,7 +11,7 @@ class FirebaseRepository @Inject constructor(val context: Context): IRepository{
         TODO("Not yet implemented")
     }
 
-    override fun getAllSecondModels(): Flow<StepModel> {
+    override fun getAllStepModels(): Flow<StepModel> {
         TODO("Not yet implemented")
     }
 
