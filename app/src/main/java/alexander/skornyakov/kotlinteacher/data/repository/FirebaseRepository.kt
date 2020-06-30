@@ -48,7 +48,7 @@ class FirebaseRepository @Inject constructor(val context: Context): IRepository{
         return callbackFlow {
             val listener = firestore.collection("sections")
                 .document(sectionId)
-                .collection("steps")
+                .collection("steps").orderBy("order")
                 .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                     querySnapshot?.documents?.let {
                         CoroutineScope(Dispatchers.IO).launch{
