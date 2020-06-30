@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/launcher_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:screenOrientation = "portrait"
         android:name="alexander.skornyakov.kotlinteacher.BaseApplication">
         <activity android:name="alexander.skornyakov.kotlinteacher.ui.main.MainActivity"></activity>
         <activity android:name="alexander.skornyakov.kotlinteacher.ui.start.StartActivity"></activity>
