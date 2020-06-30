@@ -2,6 +2,7 @@ package alexander.skornyakov.kotlinteacher.ui.main.second
 
 import alexander.skornyakov.kotlinteacher.R
 import alexander.skornyakov.kotlinteacher.data.model.StepModel
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -54,7 +55,11 @@ class SecondRecyclerViewAdapter
         holder.apply {
             header.text = model.header
             text.text = model.text
-            image.setImageBitmap(model.image)
+            if(model.image==null){
+                image.visibility = View.GONE
+            }else {
+                image.setImageBitmap(model.image)
+            }
         }
     }
 
