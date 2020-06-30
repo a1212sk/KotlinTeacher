@@ -66,8 +66,10 @@ class FirstFragment : Fragment(){
             repository.getAllSections()
                 .flowOn(Dispatchers.IO)
                 .collect {
-                    items?.value?.add(it)
-                    items?.postValue(items?.value)
+                    if(items?.value!=null && !items.value!!.contains(it)) {
+                        items?.value?.add(it)
+                        items?.postValue(items?.value)
+                    }
                 }
         }
     }

@@ -66,7 +66,7 @@ class ModelDiffCallback : DiffUtil.ItemCallback<SectionModel>() {
     }
 
     override fun areContentsTheSame(oldItem: SectionModel, newItem: SectionModel): Boolean {
-        return oldItem == newItem
+        return oldItem.header == newItem.header
     }
 
 }
