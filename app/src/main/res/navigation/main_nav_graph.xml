@@ -28,5 +28,8 @@
         <argument
             android:name="chapterId"
             app:argType="string" />
+        <argument
+            android:name="header"
+            app:argType="string" />
     </fragment>
 </navigation>

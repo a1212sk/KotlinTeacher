@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -93,5 +94,7 @@ class SecondFragment : Fragment() {
         vm = viewModelProviderFactory.create(SecondViewModel::class.java)
         val chapterId = arguments?.get("chapterId") as String
         vm.setChapterId(chapterId)
+        val header = arguments?.get("header") as String
+        (requireActivity() as MainActivity).toolbar.title = header
     }
 }
