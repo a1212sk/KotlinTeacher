@@ -8,9 +8,8 @@
     <fragment
         android:id="@+id/mainFirstFragment"
         android:name="alexander.skornyakov.kotlinteacher.ui.main.first.FirstFragment"
-        android:label="FirstFragment"
-        tools:layout="@layout/main_first_fragment"
-        >
+        android:label="Kotlin Teacher"
+        tools:layout="@layout/main_first_fragment">
         <action
             android:id="@+id/action_mainFirstFragment_to_mainSecondFragment"
             app:destination="@id/mainSecondFragment"
