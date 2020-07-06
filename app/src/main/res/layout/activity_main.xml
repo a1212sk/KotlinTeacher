@@ -28,7 +28,7 @@
             app:title="@string/ApplicationName" />
 
         <fragment
-            android:id="@+id/nav_controller"
+            android:id="@+id/main_nav_controller"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -42,6 +42,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
