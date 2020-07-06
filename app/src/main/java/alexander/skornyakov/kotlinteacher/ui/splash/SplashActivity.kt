@@ -45,13 +45,14 @@ class SplashActivity : AppCompatActivity(){
     }
 
     fun checked():Boolean{
-        val firstLaunch = storage.getString("firstLaunch")
-        if(firstLaunch=="false"){
-            return true
-        }
-        else{
-            storage.putString("firstLaunch","false")
-            return false
-        }
+//        val firstLaunch = storage.getString("firstLaunch")
+//        if(firstLaunch=="false"){
+//            return true
+//        }
+//        else{
+//            storage.putString("firstLaunch","false")
+//            return false
+//        }
+        return true
     }
 }
